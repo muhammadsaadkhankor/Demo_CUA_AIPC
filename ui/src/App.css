@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f0f13;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #e2e2e2;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.card {
+  background: #1a1a24;
+  border: 1px solid #2e2e42;
+  border-radius: 16px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #6b6b8a;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.app-input {
+  flex: 1;
+  background: #12121a;
+  border: 1px solid #2e2e42;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #e2e2e2;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.app-input:focus {
+  border-color: #6c63ff;
+}
+
+.app-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.launch-btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.launch-btn:hover:not(:disabled) {
+  background: #574fd6;
+}
+
+.launch-btn.disabled,
+.launch-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-running {
+  background: #1e2a3a;
+  color: #60a5fa;
+  border: 1px solid #2563eb44;
+}
+
+.status-success {
+  background: #0f2a1a;
+  color: #4ade80;
+  border: 1px solid #16a34a44;
+}
+
+.status-done {
+  background: #1e1e2e;
+  color: #a78bfa;
+  border: 1px solid #7c3aed44;
+}
+
+.status-error {
+  background: #2a1010;
+  color: #f87171;
+  border: 1px solid #dc262644;
+}
+
+.log-box {
+  margin-top: 20px;
+  background: #0d0d14;
+  border: 1px solid #2e2e42;
+  border-radius: 10px;
+  padding: 14px 16px;
+  max-height: 280px;
+  overflow-y: auto;
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.log-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.log-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.log-box::-webkit-scrollbar-thumb {
+  background: #2e2e42;
+  border-radius: 3px;
+}
+
+.log-line {
+  color: #9090aa;
+}
+
+.log-error {
+  color: #f87171;
+}
+
+.log-success {
+  color: #4ade80;
+  font-weight: 600;
+}
